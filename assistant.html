@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Assistant</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+
+<h1>Flat Fee MLS Assistant</h1>
+
+<p>How can we help you?</p>
+
+<button onclick="showOptions('list')">List my home</button><br><br>
+<button onclick="showOptions('mls')">Find my MLS</button><br><br>
+<button onclick="showOptions('save')">Save money</button>
+
+<div id="results" style="margin-top:20px;"></div>
+
+<script>
+function showOptions(type) {
+  const box = document.getElementById('results');
+
+  if (type === 'list') {
+    box.innerHTML = `
+      <p>You can list your home on the MLS without a realtor.</p>
+      <p>Start your listing in minutes.</p>
+    `;
+  }
+
+  if (type === 'mls') {
+    box.innerHTML = `
+      <p>We help you find your local MLS.</p>
+      <p>Get access without hiring an agent.</p>
+    `;
+  }
+
+  if (type === 'save') {
+    box.innerHTML = `
+      <p>Flat fee MLS starts at $299.</p>
+      <p>Save thousands vs 6% commission.</p>
+    `;
+  }
+}
+</script>
+
+</body>
+</html>
